@@ -1,0 +1,272 @@
+[
+  {
+    "id": "warfarin",
+    "th": "วาร์ฟาริน",
+    "en": "Warfarin",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มต้านวิตามินเค (VKA)"
+  },
+  {
+    "id": "acenocoumarol",
+    "th": "อะซีโนคูมารอล",
+    "en": "Acenocoumarol",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มต้านวิตามินเค (VKA)"
+  },
+  {
+    "id": "phenprocoumon",
+    "th": "เฟนโพรคูมอน",
+    "en": "Phenprocoumon",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มต้านวิตามินเค (VKA)"
+  },
+  {
+    "id": "apixaban",
+    "th": "อะพิกซาแบน",
+    "en": "Apixaban",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มใหม่ (NOAC/DOAC)"
+  },
+  {
+    "id": "rivaroxaban",
+    "th": "ริวารอกซาแบน",
+    "en": "Rivaroxaban",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มใหม่ (NOAC/DOAC)"
+  },
+  {
+    "id": "dabigatran",
+    "th": "ดาบิกาแทรน",
+    "en": "Dabigatran",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มใหม่ (NOAC/DOAC)"
+  },
+  {
+    "id": "edoxaban",
+    "th": "อิดอกซาแบน",
+    "en": "Edoxaban",
+    "class": "ยาต้านการแข็งตัวของเลือด กลุ่มใหม่ (NOAC/DOAC)"
+  },
+  {
+    "id": "heparin",
+    "th": "เฮพาริน",
+    "en": "Heparin",
+    "class": "ยาต้านการแข็งตัวของเลือด (เฮพาริน)"
+  },
+  {
+    "id": "aspirin",
+    "th": "แอสไพริน",
+    "en": "Aspirin",
+    "class": "ยาต้านเกล็ดเลือด (Antiplatelets)"
+  },
+  {
+    "id": "clopidogrel",
+    "th": "โคลพิโดเกรล",
+    "en": "Clopidogrel",
+    "class": "ยาต้านเกล็ดเลือด (Antiplatelets)"
+  },
+  {
+    "id": "prasugrel",
+    "th": "พราซูเกรล",
+    "en": "Prasugrel",
+    "class": "ยาต้านเกล็ดเลือด (Antiplatelets)"
+  },
+  {
+    "id": "ticagrelor",
+    "th": "ทิกาเกรลอร์",
+    "en": "Ticagrelor",
+    "class": "ยาต้านเกล็ดเลือด (Antiplatelets)"
+  },
+  {
+    "id": "cilostazol",
+    "th": "ไซโลสตาซอล",
+    "en": "Cilostazol",
+    "class": "ยาต้านเกล็ดเลือด (Antiplatelets)"
+  },
+  {
+    "id": "enalapril",
+    "th": "อีนาลาพริล",
+    "en": "Enalapril",
+    "class": "ยาลดความดัน กลุ่มยับยั้งเอนไซม์ ACE (ACE Inhibitors)"
+  },
+  {
+    "id": "lisinopril",
+    "th": "ลิซิโนพริล",
+    "en": "Lisinopril",
+    "class": "ยาลดความดัน กลุ่มยับยั้งเอนไซม์ ACE (ACE Inhibitors)"
+  },
+  {
+    "id": "ramipril",
+    "th": "รามิพริล",
+    "en": "Ramipril",
+    "class": "ยาลดความดัน กลุ่มยับยั้งเอนไซม์ ACE (ACE Inhibitors)"
+  },
+  {
+    "id": "captopril",
+    "th": "แคปโตพริล",
+    "en": "Captopril",
+    "class": "ยาลดความดัน กลุ่มยับยั้งเอนไซม์ ACE (ACE Inhibitors)"
+  },
+  {
+    "id": "losartan",
+    "th": "โลซาร์แทน",
+    "en": "Losartan",
+    "class": "ยาลดความดัน กลุ่มต้านตัวรับแอนจิโอเทนซิน (ARBs)"
+  },
+  {
+    "id": "valsartan",
+    "th": "วาลซาร์แทน",
+    "en": "Valsartan",
+    "class": "ยาลดความดัน กลุ่มต้านตัวรับแอนจิโอเทนซิน (ARBs)"
+  },
+  {
+    "id": "candesartan",
+    "th": "แคนเดซาร์แทน",
+    "en": "Candesartan",
+    "class": "ยาลดความดัน กลุ่มต้านตัวรับแอนจิโอเทนซิน (ARBs)"
+  },
+  {
+    "id": "amlodipine",
+    "th": "แอมโลดิพีน",
+    "en": "Amlodipine",
+    "class": "ยาลดความดัน กลุ่มต้านแคลเซียม (CCBs)"
+  },
+  {
+    "id": "nifedipine",
+    "th": "ไนเฟดิพีน",
+    "en": "Nifedipine",
+    "class": "ยาลดความดัน กลุ่มต้านแคลเซียม (CCBs)"
+  },
+  {
+    "id": "felodipine",
+    "th": "เฟโลดิพีน",
+    "en": "Felodipine",
+    "class": "ยาลดความดัน กลุ่มต้านแคลเซียม (CCBs)"
+  },
+  {
+    "id": "diltiazem",
+    "th": "ดิลไทอะเซม",
+    "en": "Diltiazem",
+    "class": "ยาลดความดัน กลุ่มต้านแคลเซียม (CCBs)"
+  },
+  {
+    "id": "verapamil",
+    "th": "เวอราพามิล",
+    "en": "Verapamil",
+    "class": "ยาลดความดัน กลุ่มต้านแคลเซียม (CCBs)"
+  },
+  {
+    "id": "metoprolol",
+    "th": "เมโทโพรลอล",
+    "en": "Metoprolol",
+    "class": "ยาลดความดัน กลุ่มปิดกั้นเบตา (Beta Blockers)"
+  },
+  {
+    "id": "atenolol",
+    "th": "อะทีโนลอล",
+    "en": "Atenolol",
+    "class": "ยาลดความดัน กลุ่มปิดกั้นเบตา (Beta Blockers)"
+  },
+  {
+    "id": "bisoprolol",
+    "th": "บิโซโพรลอล",
+    "en": "Bisoprolol",
+    "class": "ยาลดความดัน กลุ่มปิดกั้นเบตา (Beta Blockers)"
+  },
+  {
+    "id": "carvedilol",
+    "th": "คาร์เวดิลอล",
+    "en": "Carvedilol",
+    "class": "ยาลดความดัน กลุ่มปิดกั้นเบตา (Beta Blockers)"
+  },
+  {
+    "id": "propranolol",
+    "th": "โพรพราโนลอล",
+    "en": "Propranolol",
+    "class": "ยาลดความดัน กลุ่มปิดกั้นเบตา (Beta Blockers)"
+  },
+  {
+    "id": "furosemide",
+    "th": "ฟูโรซีไมด์",
+    "en": "Furosemide",
+    "class": "ยาขับปัสสาวะ (Diuretics)"
+  },
+  {
+    "id": "hctz",
+    "th": "ไฮโดรคลอโรไทอะไซด์",
+    "en": "Hydrochlorothiazide",
+    "class": "ยาขับปัสสาวะ (Diuretics)"
+  },
+  {
+    "id": "spironolactone",
+    "th": "สไปโรโนแลคโตน",
+    "en": "Spironolactone",
+    "class": "ยาขับปัสสาวะ (Diuretics)"
+  },
+  {
+    "id": "amiodarone",
+    "th": "อะมิโอดาโรน",
+    "en": "Amiodarone",
+    "class": "ยาควบคุมจังหวะหัวใจ (Antiarrhythmics)"
+  },
+  {
+    "id": "digoxin",
+    "th": "ดิจอกซิน",
+    "en": "Digoxin",
+    "class": "ยาควบคุมจังหวะหัวใจ (Antiarrhythmics)"
+  },
+  {
+    "id": "dronedarone",
+    "th": "โดรเนดาโรน",
+    "en": "Dronedarone",
+    "class": "ยาควบคุมจังหวะหัวใจ (Antiarrhythmics)"
+  },
+  {
+    "id": "ivabradine",
+    "th": "ไอวาบราดีน",
+    "en": "Ivabradine",
+    "class": "ยาควบคุมจังหวะหัวใจ (Antiarrhythmics)"
+  },
+  {
+    "id": "ranolazine",
+    "th": "ราโนลาซีน",
+    "en": "Ranolazine",
+    "class": "ยาควบคุมจังหวะหัวใจ (Antiarrhythmics)"
+  },
+  {
+    "id": "atorvastatin",
+    "th": "อะทอร์วาสแตติน",
+    "en": "Atorvastatin",
+    "class": "ยาลดไขมัน กลุ่มสแตติน (Statins)"
+  },
+  {
+    "id": "simvastatin",
+    "th": "ซิมวาสแตติน",
+    "en": "Simvastatin",
+    "class": "ยาลดไขมัน กลุ่มสแตติน (Statins)"
+  },
+  {
+    "id": "rosuvastatin",
+    "th": "โรสุวาสแตติน",
+    "en": "Rosuvastatin",
+    "class": "ยาลดไขมัน กลุ่มสแตติน (Statins)"
+  },
+  {
+    "id": "pravastatin",
+    "th": "พราวาสแตติน",
+    "en": "Pravastatin",
+    "class": "ยาลดไขมัน กลุ่มสแตติน (Statins)"
+  },
+  {
+    "id": "levothyroxine",
+    "th": "เลโวไทรอกซิน",
+    "en": "Levothyroxine",
+    "class": "ยาฮอร์โมนไทรอยด์"
+  },
+  {
+    "id": "diclofenac",
+    "th": "ไดโคลฟีแนค",
+    "en": "Diclofenac",
+    "class": "ยาต้านการอักเสบ (NSAIDs)"
+  },
+  {
+    "id": "antidiabetic",
+    "th": "ยาลดน้ำตาลในเลือด",
+    "en": "Antidiabetic agents",
+    "class": "ยาลดน้ำตาลในเลือด"
+  }
+]
