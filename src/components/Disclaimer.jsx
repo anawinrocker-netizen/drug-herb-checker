@@ -5,7 +5,7 @@ export default function Disclaimer({ variant = 'default', className = '' }) {
   const tone =
     variant === 'subtle'
       ? 'border-brand-100 bg-brand-50/60 text-ink-soft'
-      : 'border-amber-200 bg-amber-50 text-amber-900'
+      : 'border-gold-300/60 bg-gold-50/90 text-gold-700 shadow-soft'
 
   return (
     <div

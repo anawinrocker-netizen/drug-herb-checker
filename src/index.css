@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,47 +14,145 @@
     text-rendering: optimizeLegibility;
   }
 
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
   /* Consistent focus ring across inputs and buttons */
   *:focus-visible {
-    @apply outline-none ring-2 ring-brand-300 ring-offset-2 ring-offset-canvas;
+    @apply outline-none ring-2 ring-gold-400/70 ring-offset-2 ring-offset-canvas;
+  }
+
+  /* Very subtle paper/linen grain over everything for a premium feel */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
 
 @layer components {
-  /* Standard card surface used across the app */
+  /* Standard card surface used across the app — soft glass with hairline border */
   .card-surface {
-    @apply rounded-2xl bg-white shadow-soft;
+    @apply rounded-2xl border border-brand-100/70 bg-white/90 shadow-soft backdrop-blur-[2px]
+      transition-[box-shadow,border-color,transform] duration-300;
   }
 
-  /* Primary CTA button */
+  .card-surface:hover {
+    @apply border-gold-300/60 shadow-lift;
+  }
+
+  /* Strong frosted glass (login card, modal, navbar) */
+  .glass {
+    @apply border border-white/60 bg-white/70 shadow-lift backdrop-blur-xl;
+  }
+
+  /* Thin champagne-gold hairline border */
+  .gold-line {
+    @apply border border-gold-400/40;
+  }
+
+  /* Primary CTA button — deep emerald with a champagne ring + glow on hover */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-700
-      px-6 py-3 font-semibold text-white shadow-soft transition-colors
-      hover:bg-brand-800 focus-visible:ring-brand-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-br
+      from-brand-600 to-brand-800 px-6 py-3 font-semibold text-white shadow-soft
+      ring-1 ring-gold-400/30 transition-all duration-300
+      hover:shadow-glow focus-visible:ring-gold-400;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-2xl border
-      border-brand-200 bg-white px-6 py-3 font-semibold text-brand-700
-      shadow-soft transition-colors hover:bg-brand-50;
+      border-brand-200 bg-white/80 px-6 py-3 font-semibold text-brand-700
+      shadow-soft backdrop-blur-sm transition-all duration-300
+      hover:border-gold-300 hover:bg-brand-50/70 hover:shadow-glow;
+  }
+
+  /* Emerald→gold gradient text for special headings */
+  .text-luxe {
+    @apply bg-gradient-to-r from-brand-600 via-brand-500 to-gold-400 bg-clip-text text-transparent;
+  }
+
+  .text-gold-luxe {
+    @apply bg-gradient-to-r from-gold-200 via-gold-400 to-gold-200 bg-clip-text text-transparent;
+  }
+
+  /* Animated deep-emerald hero backdrop */
+  .hero-gradient {
+    background: linear-gradient(120deg, #0b3d26 0%, #14532d 30%, #1b6b4c 55%, #0f5132 80%, #0b3d26 100%);
+    background-size: 220% 220%;
+    animation: gradient-pan 18s ease infinite;
   }
 
   /* Faint dotted texture used over hero gradient */
   .dot-grid {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
     background-size: 22px 22px;
+  }
+
+  /* Falling-leaf animation shells (values injected via CSS vars + inline style) */
+  .leaf-fall {
+    animation-name: leaf-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+
+  .leaf-sway {
+    animation-name: leaf-sway;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  /* Rising glow particles (forest spores) */
+  .particle-rise {
+    animation-name: rise;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    will-change: transform, opacity;
+  }
+
+  /* Skeleton shimmer */
+  .shimmer {
+    background: linear-gradient(
+      100deg,
+      rgba(209, 250, 229, 0.45) 30%,
+      rgba(233, 220, 184, 0.5) 50%,
+      rgba(209, 250, 229, 0.45) 70%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
   }
 }
 
-/* Custom scrollbar for a cleaner medical-tool feel */
+/* Custom scrollbar for a cleaner premium feel */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5d0;
+  background: #b9cdc2;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9fb3aa;
+  background: #8fae9f;
+}
+
+/* Respect reduced motion: stop all decorative CSS animation */
+@media (prefers-reduced-motion: reduce) {
+  .leaf-fall,
+  .leaf-sway,
+  .particle-rise,
+  .hero-gradient,
+  .animate-blob-drift,
+  .animate-gradient-pan,
+  .animate-pulse-glow,
+  .shimmer {
+    animation: none !important;
+  }
 }

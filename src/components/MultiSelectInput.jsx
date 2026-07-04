@@ -67,7 +67,11 @@ export default function MultiSelectInput({
   return (
     <div>
       <label className="mb-2 flex items-center gap-2 text-sm font-semibold text-ink">
-        {Icon ? <Icon size={18} className={accentClass} aria-hidden="true" /> : null}
+        {Icon ? (
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-brand-50 to-gold-50 ring-1 ring-gold-300/40">
+            <Icon size={16} className={accentClass} aria-hidden="true" />
+          </span>
+        ) : null}
         {label}
       </label>
 

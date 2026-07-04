@@ -18,9 +18,9 @@ export default function InteractionCard({ item }) {
   return (
     <motion.article
       variants={cardVariants}
-      whileHover={{ y: -4 }}
-      transition={{ type: 'tween', duration: 0.2 }}
-      className="card-surface overflow-hidden border-l-4 hover:shadow-lift"
+      whileHover={{ y: -5 }}
+      transition={{ type: 'tween', duration: 0.25 }}
+      className="card-surface overflow-hidden border-l-4"
       style={{ borderLeftColor: r.border }}
     >
       <div className="p-5 sm:p-6">

@@ -23,11 +23,11 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-100/70 bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-gold-300/30 bg-white/70 shadow-[0_1px_0_rgba(201,169,97,0.15)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 rounded-xl" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white shadow-soft">
+        <Link to="/" className="group flex items-center gap-2 rounded-xl" onClick={() => setOpen(false)}>
+          <span className="animate-pulse-glow flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 text-gold-200 ring-1 ring-gold-400/40 transition-transform duration-300 group-hover:scale-105">
             <ShieldPlus size={20} strokeWidth={2.2} aria-hidden="true" />
           </span>
           <span className="flex flex-col leading-tight">
@@ -49,7 +49,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                       isActive
-                        ? 'bg-brand-50 text-brand-700'
+                        ? 'bg-brand-50 text-brand-700 ring-1 ring-gold-300/50'
                         : 'text-ink-soft hover:bg-brand-50/60 hover:text-brand-700'
                     }`
                   }
@@ -60,7 +60,7 @@ export default function Navbar() {
                       {isActive ? (
                         <motion.span
                           layoutId="nav-underline"
-                          className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-brand-600"
+                          className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-gold-400 to-gold-500"
                         />
                       ) : null}
                     </span>
@@ -70,7 +70,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <span className="mx-1 h-6 w-px bg-brand-100" aria-hidden="true" />
+          <span className="mx-1 h-6 w-px bg-gradient-to-b from-transparent via-gold-300/70 to-transparent" aria-hidden="true" />
 
           {user ? (
             <div className="flex items-center gap-2">
@@ -93,7 +93,7 @@ export default function Navbar() {
           ) : (
             <Link
               to="/login"
-              className="inline-flex items-center gap-1.5 rounded-full bg-brand-700 px-4 py-1.5 text-sm font-semibold text-white shadow-soft transition-colors hover:bg-brand-800"
+              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-4 py-1.5 text-sm font-semibold text-white shadow-soft ring-1 ring-gold-400/40 transition-all duration-300 hover:shadow-glow"
             >
               <LogIn size={15} aria-hidden="true" />
               เข้าสู่ระบบ
@@ -121,7 +121,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="overflow-hidden border-t border-brand-100 bg-white/95 md:hidden"
+            className="overflow-hidden border-t border-gold-300/30 bg-white/90 backdrop-blur-xl md:hidden"
           >
             <ul className="flex flex-col gap-1 px-4 py-3">
               {NAV_ITEMS.map((item) => (

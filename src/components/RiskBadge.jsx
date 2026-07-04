@@ -10,7 +10,7 @@ export default function RiskBadge({ level, size = 'md' }) {
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full font-semibold ${pad} ${r.bg} ${r.badgeText}`}
+      className={`inline-flex items-center gap-1.5 rounded-full font-semibold ring-1 ring-inset ring-black/[0.04] ${pad} ${r.bg} ${r.badgeText}`}
     >
       <Icon size={iconSize} strokeWidth={2.2} aria-hidden="true" />
       {r.label}

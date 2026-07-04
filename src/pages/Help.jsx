@@ -41,10 +41,17 @@ const FAQS = [
 export default function Help() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">วิธีใช้งานและคำถามที่พบบ่อย</h1>
+      <motion.header
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-8"
+      >
+        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          วิธีใช้งานและ<span className="text-luxe">คำถามที่พบบ่อย</span>
+        </h1>
         <p className="mt-2 text-ink-soft">เรียนรู้วิธีใช้ระบบ ความหมายของระดับความเสี่ยงและหลักฐาน</p>
-      </header>
+      </motion.header>
 
       {/* Steps */}
       <section>
@@ -59,12 +66,12 @@ export default function Help() {
               transition={{ duration: 0.35, delay: i * 0.05 }}
               className="card-surface flex gap-4 p-5"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-50 to-gold-50 text-brand-700 ring-1 ring-gold-300/40">
                 <s.icon size={22} aria-hidden="true" />
               </span>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-brand-600">ขั้นที่ {i + 1}</span>
+                  <span className="text-xs font-bold text-gold-600">ขั้นที่ {i + 1}</span>
                 </div>
                 <h3 className="font-semibold text-ink">{s.title}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
@@ -157,15 +164,28 @@ export default function Help() {
 function AccordionItem({ q, a }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="card-surface overflow-hidden">
+    <div className={`card-surface overflow-hidden ${open ? 'border-gold-300/60 shadow-lift' : ''}`}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="font-medium text-ink">{q}</span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }} className="shrink-0 text-brand-600">
+        <span className="flex items-center gap-2.5 font-medium text-ink">
+          <motion.span
+            animate={{ rotate: open ? 20 : 0, scale: open ? 1.12 : 1 }}
+            transition={{ duration: 0.25 }}
+            className={`shrink-0 transition-colors ${open ? 'text-gold-500' : 'text-brand-500'}`}
+          >
+            <Leaf size={17} aria-hidden="true" />
+          </motion.span>
+          {q}
+        </span>
+        <motion.span
+          animate={{ rotate: open ? 180 : 0 }}
+          transition={{ duration: 0.25 }}
+          className={`shrink-0 transition-colors ${open ? 'text-gold-500' : 'text-brand-600'}`}
+        >
           <ChevronDown size={20} aria-hidden="true" />
         </motion.span>
       </button>
@@ -178,7 +198,7 @@ function AccordionItem({ q, a }) {
             transition={{ duration: 0.28, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <p className="px-5 pb-5 text-sm leading-relaxed text-ink-soft">{a}</p>
+            <p className="px-5 pb-5 pl-[52px] text-sm leading-relaxed text-ink-soft">{a}</p>
           </motion.div>
         ) : null}
       </AnimatePresence>

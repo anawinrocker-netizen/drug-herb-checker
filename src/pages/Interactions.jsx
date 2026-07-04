@@ -51,18 +51,32 @@ export default function Interactions() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <header className="mb-6">
+      <motion.header
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-6"
+      >
         <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-          คู่ยา-สมุนไพรที่ควรระวัง
+          คู่ยา-สมุนไพร<span className="text-luxe">ที่ควรระวัง</span>
         </h1>
         <p className="mt-2 max-w-2xl text-ink-soft">
           ฐานข้อมูลปฏิกิริยาทั้งหมด {interactions.length} คู่ (เสี่ยงสูง {highTotal} คู่)
           ค้นหาและกรองตามระดับความเสี่ยง กลุ่มยา หรือสมุนไพรได้
         </p>
-      </header>
+      </motion.header>
 
       {/* Filter bar */}
-      <section className="card-surface p-4 sm:p-5">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+        className="glass relative overflow-hidden rounded-3xl border-gold-400/30 p-4 sm:p-5"
+      >
+        <span
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/70 to-transparent"
+          aria-hidden="true"
+        />
         <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative lg:col-span-1">
             <Search
@@ -127,7 +141,7 @@ export default function Interactions() {
             </select>
           </label>
         </div>
-      </section>
+      </motion.section>
 
       {rows.length === 0 ? (
         <div className="card-surface mt-6 flex flex-col items-center px-6 py-16 text-center">
@@ -138,9 +152,9 @@ export default function Interactions() {
       ) : (
         <>
           {/* Desktop table */}
-          <div className="mt-6 hidden overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-soft lg:block">
+          <div className="mt-6 hidden overflow-hidden rounded-2xl border border-gold-300/40 bg-white/95 shadow-soft backdrop-blur-sm lg:block">
             <table className="w-full text-left text-sm">
-              <thead className="bg-brand-50/70 text-xs uppercase tracking-wide text-ink-soft">
+              <thead className="bg-gradient-to-r from-brand-50/90 to-gold-50/70 text-xs uppercase tracking-wide text-ink-soft">
                 <tr>
                   <th className="px-4 py-3 font-semibold">สมุนไพร</th>
                   <th className="px-4 py-3 font-semibold">ยา</th>
