@@ -7,6 +7,8 @@ import Home from './pages/Home.jsx'
 import Checker from './pages/Checker.jsx'
 import Interactions from './pages/Interactions.jsx'
 import Help from './pages/Help.jsx'
+import Login from './pages/Login.jsx'
+import Signup from './pages/Signup.jsx'
 
 // Route transition: fade + slight upward slide.
 const pageVariants = {
@@ -70,6 +72,22 @@ export default function App() {
               element={
                 <Page>
                   <Help />
+                </Page>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <Page>
+                  <Login />
+                </Page>
+              }
+            />
+            <Route
+              path="/signup"
+              element={
+                <Page>
+                  <Signup />
                 </Page>
               }
             />

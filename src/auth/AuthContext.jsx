@@ -1,25 +1,50 @@
-import { createContext, useContext, useMemo } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import {
+  onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from 'firebase/auth'
+import { auth, googleProvider } from '../lib/firebase.js'
 
-// Placeholder auth context. Currently returns no authenticated user.
-// When real auth (e.g. Firebase) is added later, wire it up here without
-// changing the rest of the app: replace the value with real state/effects.
+// Real auth context backed by Firebase Authentication.
+// Tracks the signed-in user and exposes email/password + Google helpers.
 const AuthContext = createContext({
   user: null,
-  loading: false,
+  loading: true,
+  signUp: async () => {},
   signIn: async () => {},
-  signOut: async () => {},
+  signInWithGoogle: async () => {},
+  logOut: async () => {},
 })
 
 export function AuthProvider({ children }) {
-  // TODO: replace with real auth state when authentication is implemented.
+  const [user, setUser] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // Fires immediately with the current user (or null) once resolved, then
+    // on every subsequent sign-in / sign-out. Returns the unsubscribe fn.
+    const unsubscribe = onAuthStateChanged(auth, (nextUser) => {
+      setUser(nextUser)
+      setLoading(false)
+    })
+    return unsubscribe
+  }, [])
+
   const value = useMemo(
     () => ({
-      user: null,
-      loading: false,
-      signIn: async () => {},
-      signOut: async () => {},
+      user,
+      loading,
+      signUp: (email, password) =>
+        createUserWithEmailAndPassword(auth, email, password),
+      signIn: (email, password) =>
+        signInWithEmailAndPassword(auth, email, password),
+      signInWithGoogle: () => signInWithPopup(auth, googleProvider),
+      logOut: () => signOut(auth),
     }),
-    []
+    [user, loading]
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ShieldPlus, Menu, X } from 'lucide-react'
+import { ShieldPlus, Menu, X, LogIn, LogOut, User } from 'lucide-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 
 const NAV_ITEMS = [
   { to: '/', label: 'หน้าหลัก', end: true },
@@ -12,6 +13,14 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { user, logOut } = useAuth()
+  const navigate = useNavigate()
+
+  async function handleLogout() {
+    setOpen(false)
+    await logOut()
+    navigate('/')
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100/70 bg-white/80 backdrop-blur-md">
@@ -29,36 +38,68 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop menu */}
-        <ul className="hidden items-center gap-1 md:flex">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.to}>
-              <NavLink
-                to={item.to}
-                end={item.end}
-                className={({ isActive }) =>
-                  `relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'bg-brand-50 text-brand-700'
-                      : 'text-ink-soft hover:bg-brand-50/60 hover:text-brand-700'
-                  }`
-                }
+        {/* Desktop menu + auth */}
+        <div className="hidden items-center gap-2 md:flex">
+          <ul className="flex items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  end={item.end}
+                  className={({ isActive }) =>
+                    `relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                      isActive
+                        ? 'bg-brand-50 text-brand-700'
+                        : 'text-ink-soft hover:bg-brand-50/60 hover:text-brand-700'
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <span className="relative">
+                      {item.label}
+                      {isActive ? (
+                        <motion.span
+                          layoutId="nav-underline"
+                          className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-brand-600"
+                        />
+                      ) : null}
+                    </span>
+                  )}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+          <span className="mx-1 h-6 w-px bg-brand-100" aria-hidden="true" />
+
+          {user ? (
+            <div className="flex items-center gap-2">
+              <span
+                className="flex max-w-[12rem] items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-800"
+                title={user.email || 'ผู้ใช้'}
               >
-                {({ isActive }) => (
-                  <span className="relative">
-                    {item.label}
-                    {isActive ? (
-                      <motion.span
-                        layoutId="nav-underline"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-brand-600"
-                      />
-                    ) : null}
-                  </span>
-                )}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+                <User size={15} aria-hidden="true" />
+                <span className="truncate">{user.email || 'ผู้ใช้'}</span>
+              </span>
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-brand-50 hover:text-brand-700"
+              >
+                <LogOut size={15} aria-hidden="true" />
+                ออกจากระบบ
+              </button>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="inline-flex items-center gap-1.5 rounded-full bg-brand-700 px-4 py-1.5 text-sm font-semibold text-white shadow-soft transition-colors hover:bg-brand-800"
+            >
+              <LogIn size={15} aria-hidden="true" />
+              เข้าสู่ระบบ
+            </Link>
+          )}
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -101,6 +142,34 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               ))}
+
+              <li className="mt-1 border-t border-brand-100 pt-2">
+                {user ? (
+                  <div className="flex flex-col gap-1">
+                    <span className="flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium text-brand-800">
+                      <User size={16} aria-hidden="true" />
+                      <span className="truncate">{user.email || 'ผู้ใช้'}</span>
+                    </span>
+                    <button
+                      type="button"
+                      onClick={handleLogout}
+                      className="flex items-center gap-2 rounded-xl px-4 py-3 text-left text-sm font-medium text-ink-soft transition-colors hover:bg-brand-50/60 hover:text-brand-700"
+                    >
+                      <LogOut size={16} aria-hidden="true" />
+                      ออกจากระบบ
+                    </button>
+                  </div>
+                ) : (
+                  <NavLink
+                    to="/login"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50/60"
+                  >
+                    <LogIn size={16} aria-hidden="true" />
+                    เข้าสู่ระบบ
+                  </NavLink>
+                )}
+              </li>
             </ul>
           </motion.div>
         ) : null}

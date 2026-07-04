@@ -1,27 +1,9 @@
 [
   {
     "id": "garlic",
-    "th": "กระเทียม",
+    "th": "กระเทียมสกัดเม็ด",
     "en": "Garlic",
     "sci": "Allium sativum"
-  },
-  {
-    "id": "ginger",
-    "th": "ขิง",
-    "en": "Ginger",
-    "sci": "Zingiber officinale"
-  },
-  {
-    "id": "turmeric",
-    "th": "ขมิ้นชัน",
-    "en": "Turmeric (Curcumin)",
-    "sci": "Curcuma longa"
-  },
-  {
-    "id": "andrographis",
-    "th": "ฟ้าทะลายโจร",
-    "en": "Fah-Talai-Jone",
-    "sci": "Andrographis paniculata"
   },
   {
     "id": "ginkgo",
@@ -30,130 +12,46 @@
     "sci": "Ginkgo biloba"
   },
   {
+    "id": "ginger",
+    "th": "ขิง",
+    "en": "Ginger",
+    "sci": ""
+  },
+  {
+    "id": "dongquai",
+    "th": "ตังกุย",
+    "en": "Dong Quai",
+    "sci": ""
+  },
+  {
     "id": "ginseng",
     "th": "โสม",
-    "en": "Asian Ginseng",
+    "en": "Ginseng",
     "sci": "Panax ginseng"
   },
   {
     "id": "fishoil",
-    "th": "น้ำมันปลา / โอเมก้า-3",
-    "en": "Fish oil / Omega-3",
-    "sci": "ไม่ระบุ"
+    "th": "น้ำมันปลา",
+    "en": "Fish Oil",
+    "sci": ""
   },
   {
-    "id": "coq10",
-    "th": "โคเอนไซม์คิวเทน",
-    "en": "Coenzyme Q-10 (CoQ10)",
-    "sci": "ไม่ระบุ"
-  },
-  {
-    "id": "senna",
-    "th": "มะขามแขก",
-    "en": "Senna",
-    "sci": "Senna alexandrina"
-  },
-  {
-    "id": "stjohnswort",
-    "th": "เซนต์จอห์นเวิร์ต",
-    "en": "St John's wort",
-    "sci": "Hypericum perforatum"
-  },
-  {
-    "id": "blackcohosh",
-    "th": "แบล็คโคฮอช",
-    "en": "Black cohosh",
-    "sci": "Actaea racemosa"
+    "id": "andrographis",
+    "th": "ฟ้าทะลายโจร",
+    "en": "Andrographis",
+    "sci": "Andrographis paniculata"
   },
   {
     "id": "greentea",
     "th": "ชาเขียว",
-    "en": "Green tea",
-    "sci": "Camellia sinensis"
+    "en": "Green Tea",
+    "sci": ""
   },
   {
-    "id": "cranberry",
-    "th": "แครนเบอร์รี่",
-    "en": "Cranberry",
-    "sci": "Vaccinium macrocarpon"
-  },
-  {
-    "id": "sawpalmetto",
-    "th": "ซอว์ปาลเมตโต",
-    "en": "Saw palmetto",
-    "sci": "Serenoa repens"
-  },
-  {
-    "id": "hawthorn",
-    "th": "ฮอว์ธอร์น",
-    "en": "Hawthorn",
-    "sci": "Crataegus oxyacantha"
-  },
-  {
-    "id": "garcinia",
-    "th": "ส้มแขก",
-    "en": "Garcinia cambogia",
-    "sci": "Garcinia cambogia"
-  },
-  {
-    "id": "kratom",
-    "th": "กระท่อม",
-    "en": "Kratom",
-    "sci": "Mitragyna speciosa"
-  },
-  {
-    "id": "butterflypea",
-    "th": "อัญชัน",
-    "en": "Butterfly pea",
-    "sci": "Clitoria ternatea"
-  },
-  {
-    "id": "roselle",
-    "th": "กระเจี๊ยบแดง",
-    "en": "Roselle",
-    "sci": "Hibiscus sabdariffa"
-  },
-  {
-    "id": "lemongrass",
-    "th": "ตะไคร้",
-    "en": "Lemongrass",
-    "sci": "Cymbopogon citratus"
-  },
-  {
-    "id": "pandan",
-    "th": "เตย",
-    "en": "Pandan",
-    "sci": "Pandanus amaryllifolius"
-  },
-  {
-    "id": "bittergourd",
-    "th": "มะระ / มะระขี้นก",
-    "en": "Bitter gourd",
-    "sci": "Momordica charantia"
-  },
-  {
-    "id": "holybasil",
-    "th": "กะเพรา",
-    "en": "Holy basil",
-    "sci": "Ocimum sanctum"
-  },
-  {
-    "id": "moringa",
-    "th": "มะรุม",
-    "en": "Moringa",
-    "sci": "Moringa oleifera"
-  },
-  {
-    "id": "gotukola",
-    "th": "บัวบก",
-    "en": "Gotu kola",
+    "id": "centella",
+    "th": "ใบบัวบก",
+    "en": "Centella",
     "sci": "Centella asiatica"
-  },
-  {
-    "id": "aloevera",
-    "th": "ว่านหางจระเข้",
-    "en": "Aloe vera",
-    "sci": "Aloe vera"
   },
   {
     "id": "licorice",
@@ -162,105 +60,57 @@
     "sci": "Glycyrrhiza glabra"
   },
   {
-    "id": "blackpepper",
-    "th": "พริกไทยดำ (พิเพอรีน)",
-    "en": "Black pepper (Piperine)",
-    "sci": "Piper nigrum"
-  },
-  {
-    "id": "safflower",
-    "th": "ดอกคำฝอย",
-    "en": "Safflower",
-    "sci": "Carthamus tinctorius"
-  },
-  {
-    "id": "danshen",
-    "th": "ตานเซิน",
-    "en": "Danshen",
-    "sci": "Salvia miltiorrhiza"
-  },
-  {
-    "id": "dongquai",
-    "th": "ตังกุย",
-    "en": "Dong quai",
-    "sci": "Angelica sinensis"
-  },
-  {
-    "id": "feverfew",
-    "th": "ฟีเวอร์ฟิว",
-    "en": "Feverfew",
-    "sci": "Tanacetum parthenium"
-  },
-  {
-    "id": "horsechestnut",
-    "th": "เกาลัดม้า",
-    "en": "Horse chestnut",
-    "sci": "Aesculus hippocastanum"
-  },
-  {
-    "id": "flaxseed",
-    "th": "เมล็ดแฟลกซ์ (เมล็ดลินิน)",
-    "en": "Flaxseed",
-    "sci": "Linum usitatissimum"
-  },
-  {
-    "id": "vitamin_e",
-    "th": "วิตามินอี",
-    "en": "Vitamin E",
-    "sci": "ไม่ระบุ"
-  },
-  {
-    "id": "vitamin_k",
-    "th": "วิตามินเค / อัลฟัลฟา",
-    "en": "Vitamin K / Alfalfa",
-    "sci": "ไม่ระบุ"
-  },
-  {
-    "id": "kava",
-    "th": "คาวา คาวา",
-    "en": "Kava kava",
-    "sci": "Piper methysticum"
-  },
-  {
-    "id": "redyeastrice",
-    "th": "ข้าวยีสต์แดง",
-    "en": "Red yeast rice",
-    "sci": "Monascus purpureus"
-  },
-  {
-    "id": "devilsclaw",
-    "th": "เดวิลส์คลอว์",
-    "en": "Devil's claw",
-    "sci": "Harpagophytum procumbens"
-  },
-  {
-    "id": "fenugreek",
-    "th": "ลูกซัด",
-    "en": "Fenugreek",
-    "sci": "Trigonella foenum-graecum"
-  },
-  {
-    "id": "chamomile",
-    "th": "คาโมมายล์",
-    "en": "Chamomile",
-    "sci": "Matricaria chamomilla"
-  },
-  {
-    "id": "psyllium",
-    "th": "ไซเลียม (ใยอาหาร)",
-    "en": "Psyllium",
-    "sci": "Plantago ovata"
-  },
-  {
-    "id": "mango",
-    "th": "มะม่วง",
-    "en": "Mango",
-    "sci": "Mangifera indica"
+    "id": "stjohnswort",
+    "th": "เซนต์จอห์นเวิร์ต",
+    "en": "St John's Wort",
+    "sci": "Hypericum perforatum"
   },
   {
     "id": "grapefruit",
-    "th": "เกรปฟรุต / ส้มโอ",
+    "th": "น้ำเกรปฟรุต",
     "en": "Grapefruit",
     "sci": "Citrus paradisi"
+  },
+  {
+    "id": "dandelion",
+    "th": "แดนดิไลออน",
+    "en": "Dandelion",
+    "sci": "Taraxacum officinale"
+  },
+  {
+    "id": "javatea",
+    "th": "หญ้าหนวดแมว",
+    "en": "Java Tea",
+    "sci": "Orthosiphon aristatus"
+  },
+  {
+    "id": "cordyceps",
+    "th": "ถั่งเช่า",
+    "en": "Cordyceps",
+    "sci": "Cordyceps sinensis"
+  },
+  {
+    "id": "blackginger",
+    "th": "กระชายดำ",
+    "en": "Black Ginger",
+    "sci": "Kaempferia parviflora"
+  },
+  {
+    "id": "bittergourd",
+    "th": "มะระขี้นก",
+    "en": "Bitter Gourd",
+    "sci": "Momordica charantia"
+  },
+  {
+    "id": "calcium",
+    "th": "แคลเซียมเสริม",
+    "en": "Calcium",
+    "sci": ""
+  },
+  {
+    "id": "curcumin",
+    "th": "ขมิ้นชัน",
+    "en": "Curcumin",
+    "sci": "Curcuma longa"
   }
 ]

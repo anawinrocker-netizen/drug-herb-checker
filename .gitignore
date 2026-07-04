@@ -4,3 +4,7 @@ dist-ssr
 *.local
 .vite
 .DS_Store
+
+# Local environment secrets (Firebase config etc.) — never commit
+.env
+.env.*.local
